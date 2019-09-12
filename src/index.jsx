@@ -15,8 +15,6 @@ import App from './App';
 
 import './style.scss';
 
-console.log(require('dotenv').config())
-require('dotenv').config()
 
 const root = document.getElementById('root');
 
