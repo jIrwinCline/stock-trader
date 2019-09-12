@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
+import Header from './components/Header'
 
 class App extends React.Component{
   constructor(props){
@@ -73,7 +74,7 @@ class App extends React.Component{
   }
 
   componentDidMount = () => {
-    makeApiCall();
+    this.makeApiCall();
     this.apiTimer = setInterval( () => {
       this.makeApiCall()},
       60 * 1000)
@@ -85,7 +86,7 @@ class App extends React.Component{
   }
 
   render(){
-    return(<h1>App is working </h1>)
+    return(<Header/>)
   }
 
 
