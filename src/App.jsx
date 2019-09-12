@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
 import Header from './components/Header'
+import Body from './components/Body'
 
 class App extends React.Component{
   constructor(props){
@@ -86,7 +87,12 @@ class App extends React.Component{
   }
 
   render(){
-    return(<Header/>)
+    return(
+      <div>
+        <Header/>
+        <Body stocks={this.state.stocks} sectors={this.state.sectors}/>
+      </div>
+    )
   }
 
 

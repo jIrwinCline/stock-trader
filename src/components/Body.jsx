@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
-import Stocks from './Stocks'
+import StocksList from './StocksList'
+import Chart from './Chart'
 
-export default class Body extends Component {
+class Body extends Component {
   constructor(props) {
     super(props)
   }
   render() {
     return (
       <div>
-      <StocksList/>
+      <StocksList stocks={this.props.stocks}/>
       <Chart/>
-      <CryptosList/>
-      <IndustriesList/>
       </div>
     )
   }
 }
+
+export default Body;
+
+
+// <CryptosList/>
+// <IndustriesList/>
